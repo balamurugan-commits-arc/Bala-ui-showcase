@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta  name="viewport"  content="width=device-width,initial-scale=1.0">
+
+  <title>TO DO LIST</title>
+
+
+  <link rel="stylesheet" href="">
+  <style>
+    ul li{
+      cursor:pointer;
+     
+    }
+   #lis li.completed{
+    text-decoration:line-through;
+   }
+    
+.lists{
+  color:black;
+  font-size:30px;
+  font-family:arial;
+  list-style:square;
+  padding-left:80px;
+ 
+}
+.but{
+  font-size:17px;
+  color:maroon;
+  background-color:orange;
+  border-Color:white;
+  
+  width:25%;
+  margin-left:140px;
+
+}
+.textbox{
+  margin-top:20px;
+  margin-left:100px;
+  font-size:17px;
+  color:white;
+  background-color:black;
+  width:50%;
+  border:4px solid orange;
+
+}
+    </style>
+
+</head>
+
+<body>
+
+</script>
+<h4 style="border:2px solid yellow; height:30px ;width:20%;margin-top:0px;margin-left:500px;padding-left:100px;color:orange;background-color:black;font-size:25px">TO DO LIST</h4>
+
+<div style="display:flex">
+<div  style="border:3px solid ORANGE; height:500px ;width:100%">
+  <div><h2 style="width:40%;color:black;background-color:orange;margin-left:50px">YOUR TODAY TO DO LIST</h2></div>
+  
+    <ul class="lists" id="lis">
+  <li onclick="t()">Read news papar</li>
+  <li >Gym workout</li>
+  <li>Look at garden</li>
+  <li>Online meeting with client</li>
+  <li>Go and meet Mr.Ramesh for new project</li>
+  </ul>
+  </div>
+ <div  style="border:3px solid ORANGE; height:500px ;width:100%  ;padding-left:100px">
+    <div><h2 style="width:40%;color:white;background-color:GREEN;margin-left:50px">YOUR COMPLETED TASK TODAY</h2></div>
+  
+    <ul class="lists" id="lis1">
+ 
+  </ul>
+  
+  </div>
+</div>
+
+<div>
+  <div>
+  <input class="textbox" id="txt" type="text" placeholder="enter here to add in  your today to do list "></div>
+<button class="but" onclick="add()">
+  ADD IN TODAY TO DO LIST
+</button>
+</div>
+
+<script>
+var ch=document.getElementById("lis");
+ch.addEventListener('click',function(event){
+  if(event.target.tagname==='LI'){
+    event.target.classList.toggle('completed');
+  }
+});
+
+ function add(){
+  var input=document.getElementById("txt");
+  var ul=document.getElementById("lis");
+  var li=document.createElement("li");
+  li.textContent=input.value;
+  ul.appendChild(li);
+  input.value="";
+
+
+
+  }
+
+  
+  </script>
+  <script>
+    function t(){
+      var inpt=document.getElementById("txt");
+  var ug=document.getElementById("lis");
+    ug.li.text-decoration-line-through;
+  }
+    </script>
+
+</body>
